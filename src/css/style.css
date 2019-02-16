@@ -5,7 +5,7 @@ html {
 
 body {
 	
-	transition: 5s;
+	transition: 10s;
 }
 
 .main {
@@ -21,7 +21,7 @@ position: relative;
 
 
 
-.calculyator {
+#calculyator {
 	max-width: 300px;
 	width: 100%;
 	max-height: 500px;
@@ -37,6 +37,7 @@ left:50%;
 	background: white;
 	padding: 50px 0 0 50px;
 box-shadow: 0 0 10px 10px red;
+    transition: 5s;
     }
 
   #maximum {
