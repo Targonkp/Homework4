@@ -2,7 +2,6 @@
 const productEl = document.getElementById('product');
 const costEl = document.getElementById('cost');
 const clickEl = document.getElementById('clickOn');
-const resultEl = document.getElementById('result');
 const maximumEl = document.getElementById('maximum');
 
 
@@ -38,20 +37,21 @@ function productAddAll () {
         maximumEl.textContent = 'Название товара: ' + arr[j].name+' Стоимость: ' +arr[j].sum;
     }
     maxValue();
-
-
-
 }
+
+
+
 
 function rgb()
 {
-    var r = Math.floor(Math.random()*256);
-    var g = Math.floor(Math.random()*256);
-    var b = Math.floor(Math.random()*256);
-    var rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    const rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
     document.body.style.backgroundColor = rgb;
 }
-setInterval('rgb()',5000)
+setInterval('rgb()',5000);
+
 
 
 clickEl.addEventListener (
@@ -60,3 +60,21 @@ clickEl.addEventListener (
 )
 
 
+productEl.value = localStorage.getItem('myinput');
+productEl.addEventListener(
+    'change',
+    function () {
+        localStorage.setItem('myinput', productEl.value);
+
+    }
+
+)
+costEl.value = localStorage.getItem('myinput2');
+costEl.addEventListener(
+    'change',
+    function () {
+        localStorage.setItem('myinput2', costEl.value);
+
+    }
+
+);
