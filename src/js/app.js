@@ -2,6 +2,7 @@
 const productEl = document.getElementById('product');
 const costEl = document.getElementById('cost');
 const clickEl = document.getElementById('clickOn');
+const removeEl = document.getElementById('removeOn');
 const maximumEl = document.getElementById('maximum');
 const resultEl=document.getElementById('result');
 const calculyatorEl=document.getElementById('calculyator');
@@ -76,6 +77,13 @@ clickEl.addEventListener (
     productAddAll
 )
 
+removeEl.addEventListener(
+    'click',
+    remove=>{
+resultEl.innerHTML='';
+maximumEl.innerHTML='';
+    }
+)
 
 productEl.value = localStorage.getItem('myinput');
 productEl.addEventListener(
